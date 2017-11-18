@@ -1,8 +1,11 @@
-Overview
-========
+Guide to Using Continuum and TeamForge
+======================================
 
-This is primarily a HOWTO guide for setting up Continuum, though in relevant
-areas the instructions provided are specific to use with TeamForge for
+Overview
+--------
+
+This is primarily a HOWTO guide/cookbook for setting up Continuum, though in
+relevant areas the instructions provided are specific to use with TeamForge for
 version control and work items.  While this guide will attempt to explain
 concepts within Continuum along the way there is an assumption of some
 knowledge of the product and its terms. 
