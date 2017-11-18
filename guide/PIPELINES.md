@@ -283,10 +283,16 @@ of understanding perspective this might normally come later, but in terms of
 setting things up, it helps to do this first.  The same is going to be true
 for the next topic.
 
+Before moving on to the next topic, it might be a good idea to pause and
+reconfigure your Jenkins job so that it is ready to be triggered by Continuum.
+You can find documentation on how to do that here: 
+[Jenkins Configuration](JENKINS.md "Jenkins Configuration")
+
 Links
 -----
 
 * Next Topic: [Progressions](PROGRESSIONS.md "Progressions")
+* Related Topic: [Jenkins Configuration](JENKINS.md "Jenkins Configuration")
 * Previous Topic: [Plugins](PLUGINS.md "Plugins")
 * Return to: [Overview](../README.md "Overview")
 

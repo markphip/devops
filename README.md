@@ -37,6 +37,14 @@ up a working value stream and then revisit the concepts as you learn more.
 * [Projects](guide/PROJECTS.md "Projects")
 * [Configure Package](guide/PROJECT-PACKAGE.md "Configure Package")
 
+Additional Topics
+-----------------
+
+* [Jenkins Configuration](guide/JENKINS.md "Jenkins")
+* [Testing it out](guide/TESTING.md "Testing")
+
+
+
 More Information
 ----------------
 
