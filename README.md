@@ -24,8 +24,10 @@ Contents
 
 There are a lot of concepts to know and learn within Continuum.  The order in
 which you want to learn different concepts is up to you. The order below is the
-sequence in which the "story" flows and is arranged such that you configure an
-item before you need to reference that item in some other part of the system.
+sequence in which this particular cookbook or story" flows and is arranged such
+that you configure an item before you need to reference that item in some other
+part of the system.
+
 In some places, this does mean learning about a concept perhaps a little sooner
 than you might be ready for. However, if you follow this sequence you can set
 up a working value stream and then revisit the concepts as you learn more.
