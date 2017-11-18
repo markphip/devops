@@ -10,7 +10,7 @@ in each phase of the progression.  Starting with the “Building” phase click 
 the Add Activity button.  That will pop-up a dialog which will look like this
 once filled in:
 
-![Build Activity](images/build-actitvity.png "Build Activity")
+![Build Activity](images/build-activity.png "Build Activity")
 
 The Activity Name and Description are just for documentation to identify the
 activity in the UI.  The Type will be Initiate Pipeline by default and that is
@@ -44,7 +44,7 @@ In our case, we are just going to use manual controls as a simple way to
 simulate the rest of the process.  On the Testing Phase click Add Activity.
 On the resulting dialog you are going to change the type to Manual Activity:
 
-![Test Activity](images/test-actitvity.png "Test Activity")
+![Test Activity](images/test-activity.png "Test Activity")
 
 The category and estimated touch time drive some of the metrics.  Refer to the
 documentation for details.  As you can see you can assign this activity to
@@ -72,7 +72,7 @@ This marks the package as Delivered which will also remove it from the
 Progression.  To do that we need to add a second activity to the Ready for
 Delivery phase.  Click on Add Activity.
 
-![Deliver Activity](images/deliver-actitvity.png "Deliver Activity")
+![Deliver Activity](images/deliver-activity.png "Deliver Activity")
 
 Give it a name and description and then specify the name of the pipeline we
 created earlier and also specify our project name and click Save.  The activity
