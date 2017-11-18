@@ -27,7 +27,7 @@ Contents
 
 There are a lot of concepts to know and learn within Continuum.  The order in
 which you want to learn different concepts is up to you. The order below is the
-sequence in which this particular cookbook or story" flows and is arranged such
+sequence in which this particular cookbook or "story" flows and is arranged such
 that you configure an item before you need to reference that item in some other
 part of the system.
 
