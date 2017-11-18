@@ -153,12 +153,12 @@ We are almost done.  If you recall in the previous topic on Packages we had to
 defer setting up the package.  Now that we have created our project we can go
 back and finish the configuration.
 
-###Links
 
-Next Topic: [Configure Package](PROJECT-PACKAGE.md "Configure Package")
+Links
+-----
 
-Previous Topic: [Progressions](PACKAGES.md "Packages")
-
-Return to: [Overview](../README.md "Overview")
+* Next Topic: [Configure Package](PROJECT-PACKAGE.md "Configure Package")
+* Previous Topic: [Progressions](PACKAGES.md "Packages")
+* Return to: [Overview](../README.md "Overview")
 
 

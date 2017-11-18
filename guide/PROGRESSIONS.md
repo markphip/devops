@@ -80,12 +80,12 @@ A couple of things to note:
 That is all you do for a Progression.  The details of what these phases mean
 and what activities are done, happens in the next topic on packages.
 
-###Links
 
-Next Topic: [Packages](PACKAGES.md "Packages")
+Links
+-----
 
-Previous Topic: [Pipelines](PIPELINES.md "Pipelines")
-
-Return to: [Overview](../README.md "Overview")
+* Next Topic: [Packages](PACKAGES.md "Packages")
+* Previous Topic: [Pipelines](PIPELINES.md "Pipelines")
+* Return to: [Overview](../README.md "Overview")
 
 

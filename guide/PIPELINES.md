@@ -283,12 +283,11 @@ of understanding perspective this might normally come later, but in terms of
 setting things up, it helps to do this first.  The same is going to be true
 for the next topic.
 
-###Links
+Links
+-----
 
-Next Topic: [Progressions](PROGRESSIONS.md "Progressions")
-
-Previous Topic: [Plugins](PLUGINS.md "Plugins")
-
-Return to: [Overview](../README.md "Overview")
+* Next Topic: [Progressions](PROGRESSIONS.md "Progressions")
+* Previous Topic: [Plugins](PLUGINS.md "Plugins")
+* Return to: [Overview](../README.md "Overview")
 
 [doc]: https://community.versionone.com/VersionOne_Continuum/Continuum_Flow/Introduction_to_Continuum_Flow_Plugins/Continuum_Flow_Plugin_Arguments_and_Variables "Continuum Variables Documentation"

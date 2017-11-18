@@ -88,12 +88,12 @@ when you are done:
 At this point we are done and ready to start testing our configuration by
 making some commits to our sample application.
 
-###Links
 
-Next Topic: [Testing](TESTING.md "Testing")
+Links
+-----
 
-Previous Topic: [Projects](PROJECTS.md "Packages")
-
-Return to: [Overview](../README.md "Overview")
+* Next Topic: [Testing](TESTING.md "Testing")
+* Previous Topic: [Projects](PROJECTS.md "Packages")
+* Return to: [Overview](../README.md "Overview")
 
 

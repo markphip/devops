@@ -33,14 +33,12 @@ Project first and then come back and finish the Package configuration. We will
 do all of that in the next topic.
 
 
-###Links
+Links
+-----
 
-Next Topic: [Projects](PROJECTS.md "Projects")
-
-Related Topic: [Configure Package](PROJECT-PACKAGE.md "Configure Package")
-
-Previous Topic: [Progressions](PROGRESSIONS.md "Progressions")
-
-Return to: [Overview](../README.md "Overview")
+* Next Topic: [Projects](PROJECTS.md "Projects")
+* Related Topic: [Configure Package](PROJECT-PACKAGE.md "Configure Package")
+* Previous Topic: [Progressions](PROGRESSIONS.md "Progressions")
+* Return to: [Overview](../README.md "Overview")
 
 

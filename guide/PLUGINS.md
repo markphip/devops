@@ -58,10 +58,11 @@ Jenkins.  This can be done from the Jenkins UI via
 `Manage Jenkins > Configure Global Security`.  In the CSRF Protection section
 uncheck the box that says: `Prevent Cross Site Request Forgery exploits`.
 
-###Links
 
-Next Topic: [Pipelines](PIPELINES.md "Pipelines")
+Links
+-----
 
-Return to: [Overview](../README.md "Overview")
+* Next Topic: [Pipelines](PIPELINES.md "Pipelines")
+* Return to: [Overview](../README.md "Overview")
 
 
