@@ -150,10 +150,10 @@ server name, version number etc.
     artifactName     webapp
     version          1.0
 
-Continuum auto-detects the type of data you enter.  For the version it will
-want to treat it as a number but we want it to be a String so that the value is
-“1.0” and not “1”.  If you click on the icon next to the key name a menu
-pops-up and you can click on Type and change it from Auto to String.
+Continuum auto-detects the type of data you enter.  For the version value it 
+will want to treat it as a number but we want it to be a String so that the 
+value is stored as “1.0” and not “1”.  If you click on the icon next to the key
+name a menu pops-up and you can click on Type and change it from Auto to String.
 
 We are almost done.  If you recall in the previous topic on Packages we had to
 defer setting up the package.  Now that we have created our project we can go
