@@ -7,16 +7,16 @@ Overview
 This is primarily a HOWTO guide/cookbook for setting up Continuum, though in
 relevant areas the instructions provided are specific to use with TeamForge for
 version control and work items.  While this guide will attempt to explain
-concepts within Continuum along the way there is an assumption of some
-knowledge of the product and its terms. 
+the concepts within Continuum there is an assumption of some basic
+knowledge of the product and its terms.
 
 Requirements
 ------------
 
-Aside from having a Continuum instance running version 17.3 or later, these are
-the assumptions for this document:
+These are the assumptions required for this guide:
 
-* TeamForge 17.11 or later instance
+* Continuum 17.3 or later
+* TeamForge 17.11 or later
   * Project with a Git repository
   * Tracker with artifacts that are referenced in Git commits
 * Jenkins server
