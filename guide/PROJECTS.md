@@ -2,10 +2,11 @@ Projects
 ========
 
 This is where you connect Continuum with your source code and work items.
-Normally, this is probably the place you would begin learning about Continuum
-but as you will see to fully configure the project we are going to have to
-reference the objects we have created previously which is why I have delayed
-talking about Projects until now.
+Normally, since this is what controls how data initially flows into Continuum it
+is probably the place you would begin learning the product. As you will see, 
+to fully configure the project we are going to have to reference the objects we
+have created previously which is why I have delayed talking about Projects
+until now.
 
 There are a few types of projects but the primary type is a “Source” project
 which means it is connected with a source code repository.  Connected in the
@@ -27,7 +28,7 @@ You cannot change the name after the fact.
 
 On the Details tab of the project, click on Type and choose Source from the
 drop-down.  Then click on the Source Tab.  In the Changes From drop down choose
-TeamForge Git Webhook.  This will populate the webhook URL that you are going
+*TeamForge Git Webhook*.  This will populate the webhook URL that you are going
 to copy into TeamForge.  Click on the Copy icon to copy the URL to your
 clipboard.
 
@@ -42,8 +43,12 @@ on the Profile icon and then choose Account Details. This will pop open a
 dialog where you will see your API token. There is a copy icon to copy the
 token to your clipboard.  Do that and then switch back to the TeamForge
 window and paste it in place of the <API Token> string in the URL.  Make
-sure the Event type is “ref-updated” and click the Add button.  Then
-be sure to click the Save button so that the hook information is
+sure the Event type is “ref-updated” and click the Add button.  Your result
+should look something like this:
+
+![TeamForge Webhook](images/webhook.png "TeamForge Webhook")
+
+Be sure to ***click the Save button*** so that the hook information is
 actually saved to the server.  That is all you have to do in TeamForge.  All
 new commit activity will start flowing to Continuum as soon as you save this
 value.  There is more configuration we need to do in Continuum so that it knows
@@ -52,7 +57,7 @@ how to handle this incoming data.
 Configure Continuum Project
 ---------------------------
 Back in Continuum there is more to do on the Source tab.  First. we need to
-configure the Group.  Repositories often have a lot of different activity
+configure the **Group**.  Repositories often have a lot of different activity
 going on, such as commits for different releases or feature branches etc.
 As these commits flow into Continuum we want to group these submissions in a
 logical way. Typically, they are grouped by the Git branch that is related to
@@ -65,42 +70,43 @@ the refname which is available in the submission.  Enter this value:
     [$ ref.replace('refs/heads/', '') $] 
 
 This basically just strips refs/heads/ from the refname which is the same thing
-Continuum would normally be doing to calculate the branch name.  So once the
+Continuum would normally be doing to calculate the branch name.  Once the
 bug is fixed you could switch to just using the Branch option or just leave
 this value which will always work.
 
-Next we want to add Directives.  These tell Continuum what to do with the
+Next we want to add **Directives**.  These tell Continuum what to do with the
 submissions it receives.  We are currently going to add two directives.  The
 first one will process the incoming commits to identify TeamForge work items
 referenced in the commits.  The second one will create a package and add it
-to the Build phase of our progression.  You could also add directives to
+to the *Building* phase of our progression (or whatever name you gave to the
+first phase in your progression).  You could also add directives to
 initiate a pipeline but we are instead going to allow the configuration of our
 package in the progression to do this for us.
 
 Click the Add button.  When you first click the Add button it adds the
-Initiate Pipeline directive to your project.  You then have to click on it to
-expand it and you can change it to another directive by clicking on the Action
+Initiate Pipeline directive to your project.  You then have to click to
+expand and you can change it to another directive by clicking on the Action
 drop-down and choosing from the available list of options.  We want to select
-the one named “CollabNet TeamForge Lookup”.  If your work items were coming
-from VersionOne Lifecycle or Atlassian JIRA you would choose that option
+the one named ***CollabNet TeamForge Lookup***.  If your work items were coming
+from VersionOne Lifecycle or Atlassian Jira you would choose that option
 instead.  If your commits happen to use multiple work item systems you can add
 directives for each of them so that all of the correct work items are
 identified.  There are some additional changes to make to the form:
 
 ![TeamForge Directive](images/teamforge-directive.png "TeamForge Directive")
 
-In the When drop down change it from Always to Evaluate.  Here we want to limit
-the directive to specific values in the incoming submission.  All git activity
-is going to be sent to Continuum, we only care about changes to our master
-branch or any of our release branches.  Other activity such as creation of
-tags, or commits to developer feature branches can be ignored.  If you wanted
+In the *When* drop down change it from Always to Evaluate.  Here we want to
+limit the directive to specific values in the incoming submission.  All git
+activity is going to be sent to Continuum, we only care about changes to our
+master branch or any of our release branches.  Other activity such as creation
+of tags, or commits to developer feature branches can be ignored.  If you wanted
 to do something for those commits you of course could but I do not.  Enter
 this evaluate condition:
 
     ref in ["refs/heads/master","refs/heads/release"]
 
 This directive will only run when the change is for master or one of my release
-branches.  Of course in this example it assumes I have a naming standard of
+branches.  In this example it assumes I have a naming standard of
 “release/1.x” for my release branches.
 
 Now let’s add another directive.  Click Add again and then expand it and change
