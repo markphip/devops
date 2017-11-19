@@ -16,8 +16,7 @@ pop-up dialog to provide a Name and Description.  Once you have added the
 Package, click on the Progression tab.  This is where we will do most of the
 work.  First, we select the Progression we are going to use for this package.
 In the Progression drop-down select the Progression we created in the previous
-step.  This will load in the phases from our Progression.  The next step will
-be to specify the Activities we want to do in each phase.
+step.  This will load in the phases from our Progression.
 
 You can just go ahead and check the Promote Automatically check box on each
 Phase.  This means that once all activities for a phase have completed the
@@ -30,7 +29,7 @@ The next steps would be to add activities to each phase.  This is where we will
 indicate a pipeline to run, but before we do that this is one place we are
 going to need to stop and jump around.  We are going to have to create our
 Project first and then come back and finish the Package configuration. We will
-do all of that in the next topic.
+do all of that after we create our Project in the next topic.
 
 
 Links
