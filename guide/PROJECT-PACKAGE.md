@@ -13,12 +13,12 @@ once filled in:
 ![Build Activity](images/build-activity.png "Build Activity")
 
 The Activity Name and Description are just for documentation to identify the
-activity in the UI.  The Type will be Initiate Pipeline by default and that is
+activity in the UI.  The Type will be *Initiate Pipeline* by default and that is
 what we want to do.  Type in the name of the Pipeline we created and also the
 Project name.  The group is not needed here and will come from the package.
 In our example, we might have commits and packages for both our master branch
-but also release branches.  Those will appear as separate package in the
-progression.
+but also release branches.  Those will appear as separate packages in the
+progression so that they can be tracked separately.
 
 Click Save.  Next we want to add a Control to this activity.  This is what will
 determine that it is ready to promote.  If you remember when we created our
@@ -28,38 +28,45 @@ like this:
 
 ![Build Phase](images/build-phase.png "Build Phase")
 
-Now we are going to add controls for the remaining stages.  If we had built
-automation pipelines for each of these stages we would just follow the same
-procedure.  Instead, we are going to insert Manual Activities and controls.
-This is a nice feature of Continuum as not many companies have an entirely
-automated process.  Perhaps you need some kind of legal approval or you need to
-wait for Marketing to change something on the website before you deliver etc.
-Continuum lets you define these manual activities and even assign them to
-specific users so you can track and capture these signoffs.  This also allows
-you to get metrics in your value stream to identify where your bottle necks are.
-Some bottle necks can never be removed but once you have identified them and can
-measure them, it at least brings visibility so you can plan for them.
+Now we are going to add activities and controls for the remaining stages.  If 
+we had built automation pipelines for each of these stages we would just follow
+the same procedure.  Instead, we are going to insert Manual Activities and
+controls. This is a nice feature of Continuum as not many companies have an
+entirely automated delivery process.  Perhaps you need some kind of legal
+approval or you need to wait for Marketing to change something on the website
+before you deliver. Not to mention manual acceptance testing and approvals 
+that might be part of the process. Continuum lets you define these manual
+activities and even assign them to specific users so you can track and capture
+these signoffs.  This also allows you to get metrics in your value stream to
+identify where your bottle necks are. Some bottle necks can never be removed
+but once you have identified them and can measure them, it at least brings
+visibility so you can plan for them. When estimating the delivery of a new
+feature it is easy to only focus on the time it takes to write the code.
+Continuum allows you to be more aware of the entire delivery process so that
+you can more accurately estimate when the new feature will actually be
+***delivered***.
 
-In our case, we are just going to use manual controls as a simple way to
-simulate the rest of the process.  On the Testing Phase click Add Activity.
-On the resulting dialog you are going to change the type to Manual Activity:
+In our case, we are just going to use manual activites as a simple way to
+simulate the rest of the delivery process.  On the Testing Phase click Add
+Activity. On the resulting dialog you are going to change the type to
+Manual Activity:
 
 ![Test Activity](images/test-activity.png "Test Activity")
 
 The category and estimated touch time drive some of the metrics.  Refer to the
-documentation for details.  As you can see you can assign this activity to
-specific individuals.  This will cause them to receive an email when the package
-is ready for them to respond.  You then just type a Title and Text that will
-show up on a dialog where you confirm the activity is complete.  This dialog
-has a text entry field where the user could type in something like test results
-and you can require that something be entered.  Click Save.
+[Continuum Documentation][doc] for details.  As you can see you can assign this
+activity to specific individuals.  This will cause them to receive an email
+when the package is ready for them to respond.  You then just type a Title and
+Text that will show up on a dialog where you confirm the activity is complete.
+This dialog has a text entry field where the user could type in something like
+test results and you can require that something be entered.  Click Save.
 
 You can also add controls to the manual activities.  These will appear as check
 boxes on the dialog.  So in this example, we could add controls that say
 “Functional Tests Completed”, “Regression Tests Completed” and “Performance
 Tests Completed” and those would appear as check boxes on the dialog to confirm
 all steps have been completed.  These boxes could even be checked one at a time
-over the course of several days.
+over the course of several days by different individuals.
 
 Go ahead and add Manual Activities and Controls for the remaining phases of the
 progression.  You should end up with something like this:
@@ -69,8 +76,8 @@ progression.  You should end up with something like this:
 Now there is one more step to do.  In the final phase, after the manual
 controls are run we want to run the Delivery pipeline we created earlier.
 This marks the package as Delivered which will also remove it from the
-Progression.  To do that we need to add a second activity to the Ready for
-Delivery phase.  Click on Add Activity.
+Progression and update the metrics.  To do that we need to add a second
+activity to the Ready for Delivery phase.  Click on Add Activity.
 
 ![Deliver Activity](images/deliver-activity.png "Deliver Activity")
 
@@ -96,4 +103,4 @@ Links
 * Previous Topic: [Projects](PROJECTS.md "Packages")
 * Return to: [Overview](../README.md "Overview")
 
-
+[doc]: https://community.versionone.com/VersionOne_Continuum/Continuum_Flow/Continuum_Flow_Packages/Package_Activities_and_Controls "Continuum Documentation"
