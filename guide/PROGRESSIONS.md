@@ -60,7 +60,10 @@ With these guidelines in mind, let’s create our first progression. On the
 Admin menu click on Progressions. On the list of Progressions, click the Add New
 button to create a new progression. A dialog will pop-up where you can give it
 a name and description.  Other than figuring out what your phases should be,
-creating them and ordering them is actually pretty easy and self-explanatory.
+creating them and ordering them is actually pretty easy and self-explanatory so
+I will leave that for you to just do on your own.  This is what my Progression
+looks like.  The name of the first phase of your Progression will be needed in
+a later step.
 
 ![Create Progression](images/create-progression.png "Create Progression")
 
