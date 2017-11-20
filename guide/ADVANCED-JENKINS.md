@@ -221,7 +221,7 @@ install the Continuum plugin on your Jenkins server. This is only needed for
 this scenario where you want to be able to execute Continuum API from your
 Jenkins pipeline scripts. You can find the plugin in the list of available
 Jenkins plugins as well as here:
-https://wiki.jenkins.io/display/JENKINS/Continuum+Plugin
+https://plugins.jenkins.io/continuum
 
 Once installed, there are new Continuum directives available to use in your
 Jenkins pipeline scripts.
