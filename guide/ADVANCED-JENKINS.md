@@ -34,9 +34,9 @@ in and associate them all with a pipeline job that is specified in the
 directive.
 
 I will walk through the configuration of this pipeline shortly, but it works
-similar to the one we created for building our application before, except we
-will not use the Jenkins Build directive in the pipeline, and will instead use
-some directives to create the package and put it into the first phase.
+similar to the one we created for building our application in the main example,
+except we will not use the Jenkins Build action in the pipeline, and will
+instead use actions to create the package and put it into the first phase.
 
 In our Jenkins job configuration, we will use a Continuum plugin to call API
 in Continuum to run the pipeline when the Jenkins build job runs.  In other
