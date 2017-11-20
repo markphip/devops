@@ -11,7 +11,7 @@ where this might not work for you:
 
 2. You cannot or do not want to run a Jenkins build for every commit. One of our
    applications has a complicated CI process that runs thousands of integration
-   tests that requires spinning up a dozen Jenkins workers and runs of well over
+   tests that requires spinning up a dozen Jenkins workers and runs well over
    an hour. On account of this, we cannot run this process on every commit as we
    have people committing constantly throughout the day. So we use Jenkins SCM
    polling so that Jenkins only runs at most every 2 hours.
@@ -19,8 +19,8 @@ where this might not work for you:
 Fortunately, both of these scenarios can be solved using the same technique with
 only a slight variation. I will describe the process here.
 
-Project Configuration
----------------------
+Overview
+--------
 If you recall, when we configured our project earlier, we added **Directives**
 which controlled what Continuum does upon receiving a source code submission.
 There was a directive called Package Into Phase that we used to create a package
