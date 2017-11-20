@@ -41,12 +41,13 @@ up a working value stream and then revisit the concepts as you learn more.
 * [Packages](guide/PACKAGES.md "Packages")
 * [Projects](guide/PROJECTS.md "Projects")
 * [Configure Package](guide/PROJECT-PACKAGE.md "Configure Package")
+* [Testing Your Value Stream](guide/TESTING.md "Testing")
 
 Additional Topics
 -----------------
 
-* [Jenkins Configuration](guide/JENKINS.md "Jenkins")
-* [Testing it out](guide/TESTING.md "Testing")
+* [Jenkins Job Configuration](guide/JENKINS.md "Jenkins")
+* [Advanced/Alternative Jenkins Scenarios](guide/ADVANCED-JENKINS.md "Advanced Jenkins")
 
 
 

@@ -99,7 +99,7 @@ making some commits to our sample application.
 Links
 -----
 
-* Next Topic: [Testing](TESTING.md "Testing")
+* Next Topic: [Testing Your Value Stream](TESTING.md "Testing")
 * Previous Topic: [Projects](PROJECTS.md "Packages")
 * Return to: [Overview](../README.md "Overview")
 
