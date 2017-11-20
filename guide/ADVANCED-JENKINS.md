@@ -215,6 +215,62 @@ or "fail"
 
 Jenkins Job Configuration
 -------------------------
+The final step is we need to configure Jenkins to initiate the pipeline and
+set the pass/fail status of the job. The first thing you will need to do is
+install the Continuum plugin on your Jenkins server. This is only needed for
+this scenario where you want to be able to execute Continuum API from your
+Jenkins pipeline scripts. You can find the plugin in the list of available
+Jenkins plugins as well as here:
+https://wiki.jenkins.io/display/JENKINS/Continuum+Plugin
+
+Once installed, there are new Continuum directives available to use in your
+Jenkins pipeline scripts.
+
+It is important that you initiate the Continuum pipeline as soon as your Jenkins
+job begins to run. This is because your Jenkins job is fetching the latest
+commits when it begins to run, and Continuum should know about the same commits.
+But if you wait until the Jenkins job has been running for a while it is
+possible that Continuum now knows about even more commits that were not
+included in this build and we do not want Continuum to associate those commits
+with this run.
+
+So ideally you should have something like this at the very beginning of your
+Jenkinsfile script:
+
+    stage('Continuum') {
+        steps {
+             ctmInitiatePipeline serverUrl: 'https://devops.example.com', credentialsId: 'Continuum', project: 'Example', group: 'master', definition: 'Jenkins Initiated Build', environmentVariables: '*'
+        }
+    }
+
+The first parameter is the URL of your Continuum server.
+
+The next parameter is a credentials ID within Jenkins. This allows you to
+securely store your Continuum API token inside Jenkins.  Just create a 
+username/password credential in Continuum.  The username can be any value you
+want, and the password should be your API token from Continuum.  You also give
+the credential an "ID" and that is what you refer to in the above directive.
+
+The next parameter are the Continuum project name, group and pipeline
+definition. Remember the group should correspond to your git branch name. I
+have used strings here but you could get these from job parameters too.
+
+The next thing you want to do is add an API call to the end of the pipeline
+that communicates the job status back to the pipeline.  This will also trigger
+the pipeline to resume running if it is waiting for this data.
+
+    post {
+        success {
+            ctmPostPiData serverUrl: 'https://devops.example.com', credentialsId: 'Continuum', key: 'status', value: 'pass'
+        }
+        failure {
+            ctmPostPiData serverUrl: 'https://devops.example.com', credentialsId: 'Continuum', key: 'status', value: 'fail'
+        }
+    }
+
+This will always run at end of the job and send the pass or fail status back to
+the pipeline workspace so that it can condition the actions accordingly.
+
 
 Links
 -----
