@@ -275,6 +275,8 @@ the pipeline workspace so that it can condition the actions accordingly.
 Links
 -----
 
+* Related Topic: [Pipelines](PIPELINES.md "Pipelines")
+* Related Topic: [Projects](PROJECTS.md "Projects")
 * Return to: [Overview](../README.md "Overview")
 
 
