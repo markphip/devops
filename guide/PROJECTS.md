@@ -21,29 +21,29 @@ through your value stream.
 
 Create Your First Project
 -------------------------
-On the Admin menu choose Projects then click Add New. A wizard pops up, but
+On the *Admin* menu choose *Projects* then click *Add New*. A wizard pops up, but
 it does not support TeamForge yet so you need to take the Manual option and
-then click Next.  Provide a Name and Description for your project and click Ok.
+then click *Next*.  Provide a Name and Description for your project and click *Ok*.
 You cannot change the name after the fact.
 
-On the Details tab of the project, click on Type and choose Source from the
-drop-down.  Then click on the Source Tab.  In the Changes From drop down choose
+On the *Details* tab of the project, click on *Type* and choose *Source* from the
+drop-down.  Then click on the *Source* Tab.  In the *Changes From* drop down choose
 *TeamForge Git Webhook*.  This will populate the webhook URL that you are going
 to copy into TeamForge.  Click on the Copy icon to copy the URL to your
 clipboard.
 
 Configure TeamForge Webhook
 ---------------------------
-Switch over to TeamForge and view your Git repository and click on its Settings
-tab.  Then click on the Policies tab.  At the bottom of the page is a place to
+Switch over to TeamForge and view your Git repository and click on its *Settings*
+tab.  Then click on the *Policies* tab.  At the bottom of the page is a place to
 enter webhooks.  Paste the URL into the box.  The URL contains the string
 <API Token>.  You need to replace this with your API token from Continuum.
 To get that value go back to Continuum and in the top right corner click
-on the Profile icon and then choose Account Details. This will pop open a
+on the *Profile* icon and then choose *Account Details*. This will pop open a
 dialog where you will see your API token. There is a copy icon to copy the
 token to your clipboard.  Do that and then switch back to the TeamForge
 window and paste it in place of the <API Token> string in the URL.  Make
-sure the Event type is “ref-updated” and click the Add button.  Your result
+sure the Event type is “ref-updated” and click the *Add* button.  Your result
 should look something like this:
 
 ![TeamForge Webhook](images/webhook.png "TeamForge Webhook")
@@ -56,7 +56,7 @@ how to handle this incoming data.
 
 Configure Continuum Project
 ---------------------------
-Back in Continuum there is more to do on the Source tab.  First. we need to
+Back in Continuum there is more to do on the *Source* tab.  First, we need to
 configure the **Group**.  Repositories often have a lot of different activity
 going on, such as commits for different releases or feature branches etc.
 As these commits flow into Continuum we want to group these submissions in a

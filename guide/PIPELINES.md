@@ -10,7 +10,7 @@ many pipelines.  When you think of your entire DevOps process, it will likely
 not just be one big pipeline.  Instead, the pipelines will be broken up into
 the automations you run at the various points in your process.  For example,
 your build process will be a pipeline.  If you want it to, maybe you will also
-run some automated tests during this pipeline and perhaps if those pass you
+run some automated tests during this pipeline and, perhaps, if those pass you
 may even install the build on a test server for manual testing.  But all of
 those things could also be separate pipelines if it makes sense, which would
 certainly be the case if there are any manual handoffs that occur between
@@ -31,18 +31,18 @@ Another important concept to know is that when a Pipeline runs it has something
 called a **Workspace** which is a set of JSON data with information about the
 running pipeline instance.  The workspace contains data that might have been
 passed into the instance as part of initiating it and it can also be used to
-store data as the pipeline runs so you can pass along information from one step
+store data as the pipeline runs, so you can pass along information from one step
 to the next.  The data in the workspace is referenced using a syntax like this:
 
     [$ keyname[“subkeyname”] $]
 
 When you view a pipeline instance, either while it is running or after it runs,
 you can see the workspace data and explore the JSON structure.  This is useful
-for getting an idea what data is available and what the key names are etc.
+for getting an idea what data is available and what the key names are, etc.
 
 Pipelines are a big topic to learn and digest. For now, we are just going to
 create two simple pipeline definitions.  The first one will be used at the
-beginning of our values team to run a Jenkins job to build our application. The
+beginning of our value stream to run a Jenkins job to build our application. The
 second one will be used at the very end of our value stream to mark the status
 of the package as delivered. We will need to reference these definitions in a
 later step when we setup our Package, so we are going to put something in
@@ -50,8 +50,8 @@ place now so that we do not have to jump around later.
 
 Create Your Pipeline Definition for Build Process
 -------------------------------------------------
-Go back to the Admin menu in the top right and choose Pipelines and then click
-on Add New. In the pop-up dialog, you provide a name and description for your
+Go back to the Admin menu in the top right, choose *Pipelines* and then click
+on *Add New*. In the pop-up dialog, you provide a name and description for your
 pipeline. I am going to name this “*Common Build*” because it is a definition I
 intend to use for several applications that will follow a similar process to be
 built.  I am going to make use of variables in the definition so that the
@@ -62,7 +62,7 @@ of available plugins which contain the various steps you can insert into your
 Pipeline.  Feel free to click on the plugins to get a sense of the rich
 assortment of functionality available.  In this guide, we will be focusing on
 just two of the plugins.  **Jenkins**, which has actions to trigger a job or
-fetch info about a job and **Flow** which contains many actions for working
+fetch info about a job, and **Flow**, which contains many actions for working
 with the objects that make up Continuum.
 
 On the right-hand side is where you create your definition. It will have been
@@ -74,7 +74,7 @@ The next step is going to be to drag actions into my stage.
 
 Trigger Jenkins Build
 ---------------------
-Go back to the left-hand side and click on Jenkins.  Then drag the action
+Go back to the left-hand side and click on **Jenkins**.  Then drag the action
 named ***Build*** over to the Stage and drop it. I will explain the data to enter
 into the form in more detail, but it will look like this:
 
@@ -123,11 +123,11 @@ basically about whether you want the Pipeline to stop and fail if the Jenkins
 job fails.  I do not want to do this, instead I will use the job status as a
 Conditional value in subsequent actions.
 
-We are going to leave the next two parameters empty, but you would use this to
-search for and extract text from the Jenkins log output and store it in a
-workspace variable.  You might do this to extract a version number or artifact
-name or basically anything that was in the log that you needed to store and use
-in subsequent actions.
+We are going to leave the next two parameters (*Regular Expression* and *Value to Set*) 
+empty, but you would use these to search for and extract text from the Jenkins 
+log output and store it in a workspace variable.  You might do this to extract 
+a version number or artifact name or basically anything that was in the log that 
+you needed to store and use in subsequent actions.
 
 The next parameter is the *Jenkins Instance Name*. This is referencing the
 Jenkins plugin we setup at the beginning of the guide.  This lets you specify
@@ -149,7 +149,7 @@ finish this pipeline.
 
 Create Artifact
 ---------------
-The next action to add is under the Flow plugin and it is called
+The next action to add is under the **Flow** plugin and it is called
 ***Artifact – New Revision***.  We are going to use this action to create an
 artifact in Continuum. Artifacts are generally the output of your build process.
 Something like an RPM, a JAR/WAR, an EXE etc.  Creating an artifact in Continuum

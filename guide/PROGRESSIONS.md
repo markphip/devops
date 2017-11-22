@@ -6,7 +6,7 @@ process your software goes through as it progresses in maturity from the initial
 build until delivery.  In terms of figuring out what the phases should be in
 your progression, I find it helps to start at the end, which is delivery. This
 phase does NOT appear in your progression.  This is what your software
-deliverable ultimately progresses too as its final step and when the specific
+deliverable ultimately progresses to as its final step and when the specific
 version you are tracking is removed from the progression board. Imagine starting
 with a specific delivered version of your software.  From there, work backwards
 and think though all of the activities that happened on that specific build, all
@@ -31,20 +31,20 @@ the phases in your progression.  Here are some good guidelines to follow though:
     of builds are being created and probably going through testing phases.
     Imagine you have things you do like security scans and performance tests.
     You probably do not wait for the final build to do these activities, because
-    if they found a problem you would not be able to deliver anything.  The
+    if they found a problem, you would not be able to deliver anything.  The
     question, then, is whether these sorts of activities are phases, or are they
     part of another phase, like a testing phase.  The answer to this question
     should be whether that final build you deploy went through these activities
     or did they only happen on one of the earlier builds?  If the answer is that
     these activities were only done on an earlier build, then it makes sense
     that those activities be grouped into a general “Testing” phase and not be
-    their own phase in your progression.  If however, the final build does have
+    their own phase in your progression.  If, however, the final build does have
     these activities performed then these should be their own phase in the
     progression, and it would be perfectly fine and normal for earlier builds
     in the iteration to also have progressed to those phases even though they
     were not delivered.  Finally, if you find yourself really believing these
     activities should show up as their own phases, but you do not currently run
-    those activities on your final build, perhaps you should reconsider your
+    those activities on your final build, perhaps, you should reconsider your
     process so that you are doing those activities on that final build.
 
 3.	If you have multiple applications that all follow the same progression,
@@ -57,7 +57,7 @@ the phases in your progression.  Here are some good guidelines to follow though:
 Create Your First Progression
 -----------------------------
 With these guidelines in mind, let’s create our first progression. On the
-Admin menu click on Progressions. On the list of Progressions, click the Add New
+*Admin* menu click on *Progressions*. On the list of Progressions, click the *Add New*
 button to create a new progression. A dialog will pop-up where you can give it
 a name and description.  Other than figuring out what your phases should be,
 creating them and ordering them is actually pretty easy and self-explanatory so
