@@ -48,6 +48,8 @@ Additional Topics
 
 * [Jenkins Job Configuration](guide/JENKINS.md "Jenkins")
 * [Advanced/Alternative Jenkins Scenarios](guide/ADVANCED-JENKINS.md "Advanced Jenkins")
+* [Advanced Pipeline TeamForge Scenarios](guide/ADVANCED-TEAMFORGE.md "Advanced TeamForge")
+
 
 
 
