@@ -1,4 +1,4 @@
-RAdvanced Pipeline Steps for TeamForge
+Advanced Pipeline Steps for TeamForge
 ====================================================
 
 In the main cookbook story presented in this guide, we defined a very simple 
