@@ -56,9 +56,13 @@ In addition, the **LATEST** tag makes it clear that some changes were made for t
 artifact and made it all the way to the Canary deployment stage, but then more
 work was done and those changes have only progressed as far as the Testing stage.
 
-Perhaps the artifact itself has been marked Done because the work is done, but
-by being able to see the actual Delivery information you can see that the changes
-for this artifact have not actually been delivered yet.
+We can also see that changes have been made for two packages that make up our
+application.  Regardless how many packages or how many progressions those
+packages follow, we can easily see all of the information on this one tab. If
+the user needs to see more information about the package there are links that
+will take them to the Continuum UI.  The user would need to have an account on
+the Continuum server to follow the links, but no account is needed to just see
+the information in TeamForge. 
 
 Links
 -----
